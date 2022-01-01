@@ -10,10 +10,9 @@
     <div class="box">
       <echart :option="sexOption" :height="400" />
     </div>
-    <div class="box">21312312231231</div>
-    <div>65655</div>
-    <div>65655</div>
-    <div>65655</div>
+    <div class="box">
+      <echart id="yuyuyu" :option="shuiqiuOptions" :height="400" />
+    </div>
   </div>
 </div>
 </template>
@@ -22,21 +21,22 @@
 import * as echarts from 'echarts';
 import { onMounted, ref, defineAsyncComponent } from 'vue';
 import { handlePieCube } from './echart/pie3D';
-import { visitor_data, visitor_time_data } from './echart/echart-config';
+import { visitorData, visitorTimeData, shuiqiu, picOption } from './echart/echart-config';
 
 const Echart = defineAsyncComponent(() => import("~/components/echart/index.vue"));
   const num = ref(1)
   const box = ref(null)
-  const options = ref(visitor_data)
+  const options = ref(visitorData)
   const box_1 = ref(null)
   const shenzhen = ref(null)
   const time = ref(null)
+  const shuiqiuOptions = ref(shuiqiu)
   const sexOption = (handlePieCube({
     data: [
-      { name: '更新整备用地', value: 19 },
-      { name: '其他(含工改保)用地', value: 40 },
-      { name: '新供应用地', value: 74 },
-      { name: '旧住宅拆除改造(棚户区改造)用地', value: 80 }
+      { name: '嘤嘤嘤', value: 22 },
+      { name: '嗯嗯嗯', value: 40 },
+      { name: '鹅鹅鹅', value: 74 },
+      { name: '嘿嘿嘿', value: 80 }
     ],
     showPercent: true
   }))
@@ -44,12 +44,12 @@ const Echart = defineAsyncComponent(() => import("~/components/echart/index.vue"
   const number = 0
   let udd = add + number
   const getMounted = () => {
-    // console.log(box.value) // vue3中需要这样获取dom
+    // console.log(box.value) // vue3中需要这样获取dom---------
 
-    var myChart = echarts.init(box.value);
-    var myChart1 = echarts.init(box_1.value)
-    var myChart2 = echarts.init(shenzhen.value)
-    var timeChart = echarts.init(time.value)
+    const myChart = echarts.init(box.value);
+    const myChart1 = echarts.init(box_1.value)
+    const myChart2 = echarts.init(shenzhen.value)
+    const timeChart = echarts.init(time.value)
     
     const option = {
       tooltip: {
@@ -137,7 +137,7 @@ const Echart = defineAsyncComponent(() => import("~/components/echart/index.vue"
     // 绘制图表
     myChart.setOption(option);
     myChart2.setOption(options.value);
-    timeChart.setOption(visitor_time_data);
+    timeChart.setOption(visitorTimeData);
     myChart1.setOption({
       legend: {},
       tooltip: {},
@@ -162,7 +162,7 @@ const Echart = defineAsyncComponent(() => import("~/components/echart/index.vue"
 
 </script>
 
-<style>
+<style scoped>
   .box {
     width: 33%;
     height: 400px;
@@ -172,8 +172,13 @@ const Echart = defineAsyncComponent(() => import("~/components/echart/index.vue"
     height: 400px;
   }
   .max-box {
+    background-color: rgba(6, 251, 254, 0.2);
     width: 100%;
     display: flex;
     justify-content: space-between;
+  }
+  .echart-3d-bar {
+    width: 100%;
+    height: 500px;
   }
 </style>

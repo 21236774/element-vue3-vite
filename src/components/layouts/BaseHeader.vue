@@ -12,7 +12,7 @@
 
 <template>
 <el-container>
-  <el-header>Header</el-header>
+  <el-header>我是头</el-header>
   <el-container>
     <el-aside width="200px">
         <el-menu
