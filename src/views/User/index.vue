@@ -10,7 +10,7 @@
     <div class="box">
       <echart :option="sexOption" :height="400" />
     </div>
-    <div class="box">21312312</div>
+    <div class="box">21312312231231</div>
     <div>65655</div>
     <div>65655</div>
     <div>65655</div>
