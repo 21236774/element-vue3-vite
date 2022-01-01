@@ -59,14 +59,14 @@
                return true
              }
            })
-           if (val === '更新整备用地') {
-             return `{f3|∎}{f1|${val}}       {f2|${obj.data[0].value}}公顷`
-           } else if (val === '其他(含工改保)用地') {
-             return `{f4|∎}{f1|${val}}       {f2|${obj.data[1].value}}公顷`
-           } else if (val === '新供应用地') {
-             return `{f5|∎}{f1|${val}}       {f2|${obj.data[2].value}}公顷`
-           } else if (val === '旧住宅拆除改造(棚户区改造)用地') {
-             return `{f6|∎}{f1|${val}}       {f2|${obj.data[3].value}}公顷`
+           if (val === '嘤嘤嘤') {
+             return `{f3|∎}{f1|${val}}       {f2|${obj.data[0].value}}人`
+           } else if (val === '嗯嗯嗯') {
+             return `{f4|∎}{f1|${val}}       {f2|${obj.data[1].value}}人`
+           } else if (val === '鹅鹅鹅') {
+             return `{f5|∎}{f1|${val}}       {f2|${obj.data[2].value}}人`
+           } else if (val === '嘿嘿嘿') {
+             return `{f6|∎}{f1|${val}}       {f2|${obj.data[3].value}}人`
            }
          } else return val
        },
