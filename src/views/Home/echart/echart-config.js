@@ -682,7 +682,7 @@ function getCirlPoint(x0, y0, r, angle) {
 
 function draw() {
   angle = angle + 3
-  myChart.setOption(option, true)
+  // myChart.setOption(option, true)
   //window.requestAnimationFrame(draw);
 }
 if (timerId) {

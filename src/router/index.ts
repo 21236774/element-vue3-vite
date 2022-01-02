@@ -15,24 +15,38 @@ const routes = [
     path:'/home',
     name:'home',
     component: Home,
-    // component:() => import('../views/Home/index.vue'),
     children:[
       {
-        path:'/',
-        component:()=>import('../views/User/index.vue'),
+        path:'/home/index',
+        component:()=>import('../views/Home/home.vue'),
       },
       {
-        path:'/home/users',
-        component:()=>import('../views/User/index.vue'),
+        path:'/home/order',
+        component:()=>import('../views/Order/index.vue'),
       },
       {
-        path:'/home/list',
-        component:()=>import('../views/Home/List.vue'),
+        path:'/home/users/member',
+        component:()=>import('../views/User/member.vue'),
       },
       {
-        path:'/home/edit',
-        name: 'edit',
-        component:()=>import('../views/Home/Edit.vue'),
+        path:'/home/users/usersofnumber',
+        component:()=>import('../views/User/usersOfNumber.vue'),
+      },
+      {
+        path:'/home/product/classification',
+        component:()=>import('../views/Product/classification.vue'),
+      },
+      {
+        path:'/home/product/commodity',
+        component:()=>import('../views/Product/commodity.vue'),
+      },
+      {
+        path:'/home/product/swipersetup',
+        component:()=>import('../views/Product/swiperSetUp.vue'),
+      },
+      {
+        path:'/home/system',
+        component:()=>import('../views/System/index.vue'),
       },
     ]
   },

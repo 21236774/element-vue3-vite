@@ -23,7 +23,7 @@
   const password = ref('')
 
   if(token) {
-    router.push('/home')
+    router.push('/home/index')
   }
 
   const addAnswer = (value: object) => {

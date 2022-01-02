@@ -12,7 +12,9 @@
 
 <template>
 <el-container>
-  <el-header>我是头</el-header>
+  <el-header>
+    <div class="header-top-box">欢迎：admin</div>
+  </el-header>
   <el-container>
     <el-aside width="200px">
         <el-menu
@@ -67,5 +69,8 @@
     color: #333;
     text-align: center;
     line-height: 160px;
+  }
+  .header-top-box {
+    float: right;
   }
 </style>
